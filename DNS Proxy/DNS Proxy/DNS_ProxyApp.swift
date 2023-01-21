@@ -11,7 +11,7 @@ import SwiftUI
 struct DNS_ProxyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(store: .init())
+            ContentView()
         }
     }
 }

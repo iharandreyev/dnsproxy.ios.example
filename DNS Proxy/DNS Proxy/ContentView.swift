@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject
-    private(set) var store: ContentViewStore
+    private(set) var store = ContentViewStore()
     
     var body: some View {
         VStack(spacing: 16) {
@@ -50,7 +50,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(store: .init())
+        ContentView()
     }
 }
 
@@ -60,7 +60,7 @@ final class ContentViewStore: ObservableObject {
     
     private var subs: Set<AnyCancellable> = []
     
-    private let proxy = DNSProxyManager()
+    private let proxy = DNSProxyManager.shared
     
     init() {
         proxy.$isEnabled

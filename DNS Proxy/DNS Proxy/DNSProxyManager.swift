@@ -11,34 +11,30 @@ final class DNSProxyManager: NSObject, ObservableObject {
     private let manager = NEDNSProxyManager.shared()
     
     private let proxyName = "DNS Proxy"
-    private var isEnabledObserver: Timer?
     
     @Published
     private(set) var isEnabled: Bool? = nil
+    
+    static let shared = DNSProxyManager()
 
-    override init() {
+    private override init() {
         super.init()
         enable()
     }
     
     func enable() {
-        manager.updateConfiguration { [weak self] manager in
-            self?.enable(manager)
-        } completion: { [weak self] result in
+        manager.updateConfiguration { [unowned self] manager in
+            manager.localizedDescription = proxyName
+            manager.providerProtocol = createProxyProtocol()
+            manager.isEnabled = true
+        } completion: { [unowned self] result in
             switch result {
             case let .success(manager):
-                self?.syncState(with: manager)
-                self?.observeIsEnabledIfNeeded()
+                syncState(with: manager)
             case let .failure(error):
                 Log("Proxy enable failed: \(error)")
             }
         }
-    }
-    
-    private func enable(_ manager: NEDNSProxyManager) {
-        manager.localizedDescription = proxyName
-        manager.providerProtocol = createProxyProtocol()
-        manager.isEnabled = true
     }
     
     private func createProxyProtocol() -> NEDNSProxyProviderProtocol {
@@ -50,28 +46,22 @@ final class DNSProxyManager: NSObject, ObservableObject {
 
     func disable() {
         Log("Will disable proxy")
-        manager.updateConfiguration { [weak self] manager in
-            self?.disable(manager)
-        } completion: { [weak self] result in
+        manager.updateConfiguration { manager in
+            manager.providerProtocol = nil
+            manager.isEnabled = false
+        } completion: { [unowned self] result in
             switch result {
             case let .success(manager):
-                self?.syncState(with: manager)
+                syncState(with: manager)
             case let .failure(error):
                 Log("Proxy disable failed: \(error)")
             }
-            
-            self?.isEnabledObserver = nil
         }
     }
 
-    private func disable(_ manager: NEDNSProxyManager) {
-        manager.providerProtocol = nil
-        manager.isEnabled = false
-    }
-    
     private func syncState(with manager: NEDNSProxyManager) {
-        DispatchQueue.main.async { [weak self] in
-            self?.setIsEnabled(manager.isEnabled)
+        DispatchQueue.main.async { [unowned self] in
+            setIsEnabled(manager.isEnabled)
         }
     }
     
@@ -79,24 +69,5 @@ final class DNSProxyManager: NSObject, ObservableObject {
         guard self.isEnabled != isEnabled else { return }
         self.isEnabled = isEnabled
         Log("Proxy \(isEnabled ? "enabled" : "disabled")")
-    }
-    
-    private func observeIsEnabledIfNeeded() {
-        guard case .none = isEnabledObserver else { return }
-        isEnabledObserver = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] _ in
-            self?.updateIsEnabled()
-        }
-    }
-    
-    private func updateIsEnabled() {
-        let manager = manager
-        manager.loadFromPreferences { [weak self] error in
-            switch error {
-            case .none:
-                self?.syncState(with: manager)
-            case let .some(error):
-                Log("\(error)")
-            }
-        }
     }
 }
