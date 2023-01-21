@@ -5,6 +5,7 @@
 //  Created by Andreyeu, Ihar on 1/21/23.
 //
 
+import Combine
 import SwiftUI
 
 struct ContentView: View {
@@ -57,11 +58,23 @@ final class ContentViewStore: ObservableObject {
     @Published
     private(set) var isProxyEnabled: Bool? = nil
     
+    private var subs: Set<AnyCancellable> = []
+    
+    private let proxy = DNSProxyManager()
+    
+    init() {
+        proxy.$isEnabled
+            .sink(receiveValue: { [weak self] isEnabled in
+                self?.isProxyEnabled = isEnabled
+            })
+            .store(in: &subs)
+    }
+    
     func enableProxy() {
-        
+        proxy.enable()
     }
     
     func disableProxy() {
-        
+        proxy.disable()
     }
 }

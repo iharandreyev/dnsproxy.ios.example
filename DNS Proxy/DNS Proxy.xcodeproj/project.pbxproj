@@ -11,6 +11,9 @@
 		96B6F4AE297C169600577DAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AD297C169600577DAA /* ContentView.swift */; };
 		96B6F4B0297C169700577DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B6F4AF297C169700577DAA /* Assets.xcassets */; };
 		96B6F4B3297C169700577DAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B6F4B2297C169700577DAA /* Preview Assets.xcassets */; };
+		96B6F4BB297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */; };
+		96B6F4BD297C1F0A00577DAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BC297C1F0A00577DAA /* Logger.swift */; };
+		96B6F4BF297C1FD600577DAA /* DNSProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		96B6F4AF297C169700577DAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96B6F4B2297C169700577DAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96B6F4B9297C16AA00577DAA /* DNS Proxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DNS Proxy.entitlements"; sourceTree = "<group>"; };
+		96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEDNSProxyManager+Utilities.swift"; sourceTree = "<group>"; };
+		96B6F4BC297C1F0A00577DAA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,11 @@
 			isa = PBXGroup;
 			children = (
 				96B6F4B9297C16AA00577DAA /* DNS Proxy.entitlements */,
-				96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */,
 				96B6F4AD297C169600577DAA /* ContentView.swift */,
+				96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */,
+				96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */,
+				96B6F4BC297C1F0A00577DAA /* Logger.swift */,
+				96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */,
 				96B6F4AF297C169700577DAA /* Assets.xcassets */,
 				96B6F4B1297C169700577DAA /* Preview Content */,
 			);
@@ -140,7 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B6F4AE297C169600577DAA /* ContentView.swift in Sources */,
+				96B6F4BB297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift in Sources */,
+				96B6F4BF297C1FD600577DAA /* DNSProxyManager.swift in Sources */,
 				96B6F4AC297C169600577DAA /* DNS_ProxyApp.swift in Sources */,
+				96B6F4BD297C1F0A00577DAA /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
