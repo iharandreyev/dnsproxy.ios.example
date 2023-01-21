@@ -42,6 +42,7 @@
 		96B6F49F297C169600577DAA = {
 			isa = PBXGroup;
 			children = (
+				96B6F4C0297C25F400577DAA /* Common */,
 				96B6F4AA297C169600577DAA /* DNS Proxy */,
 				96B6F4A9297C169600577DAA /* Products */,
 			);
@@ -62,7 +63,6 @@
 				96B6F4AD297C169600577DAA /* ContentView.swift */,
 				96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */,
 				96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */,
-				96B6F4BC297C1F0A00577DAA /* Logger.swift */,
 				96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */,
 				96B6F4AF297C169700577DAA /* Assets.xcassets */,
 				96B6F4B1297C169700577DAA /* Preview Content */,
@@ -76,6 +76,14 @@
 				96B6F4B2297C169700577DAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		96B6F4C0297C25F400577DAA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				96B6F4BC297C1F0A00577DAA /* Logger.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
