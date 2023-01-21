@@ -14,7 +14,35 @@
 		96B6F4BB297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */; };
 		96B6F4BD297C1F0A00577DAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BC297C1F0A00577DAA /* Logger.swift */; };
 		96B6F4BF297C1FD600577DAA /* DNSProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */; };
+		96B6F4C8297C260F00577DAA /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B6F4C7297C260F00577DAA /* NetworkExtension.framework */; };
+		96B6F4CB297C260F00577DAA /* DNSProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4CA297C260F00577DAA /* DNSProxyProvider.swift */; };
+		96B6F4D0297C260F00577DAA /* DNS Proxy Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 96B6F4C5297C260F00577DAA /* DNS Proxy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		96B6F4D5297C261700577DAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BC297C1F0A00577DAA /* Logger.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96B6F4CE297C260F00577DAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96B6F4A0297C169600577DAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96B6F4C4297C260F00577DAA;
+			remoteInfo = "DNS Proxy Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		96B6F4D4297C260F00577DAA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				96B6F4D0297C260F00577DAA /* DNS Proxy Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		96B6F4A8297C169600577DAA /* DNS Proxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DNS Proxy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +54,11 @@
 		96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEDNSProxyManager+Utilities.swift"; sourceTree = "<group>"; };
 		96B6F4BC297C1F0A00577DAA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyManager.swift; sourceTree = "<group>"; };
+		96B6F4C5297C260F00577DAA /* DNS Proxy Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DNS Proxy Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B6F4C7297C260F00577DAA /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		96B6F4CA297C260F00577DAA /* DNSProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyProvider.swift; sourceTree = "<group>"; };
+		96B6F4CC297C260F00577DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B6F4CD297C260F00577DAA /* DNS_Proxy_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNS_Proxy_Extension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +66,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B6F4C2297C260F00577DAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B6F4C8297C260F00577DAA /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +85,8 @@
 			children = (
 				96B6F4C0297C25F400577DAA /* Common */,
 				96B6F4AA297C169600577DAA /* DNS Proxy */,
+				96B6F4C9297C260F00577DAA /* DNS Proxy Extension */,
+				96B6F4C6297C260F00577DAA /* Frameworks */,
 				96B6F4A9297C169600577DAA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				96B6F4A8297C169600577DAA /* DNS Proxy.app */,
+				96B6F4C5297C260F00577DAA /* DNS Proxy Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +130,24 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		96B6F4C6297C260F00577DAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96B6F4C7297C260F00577DAA /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96B6F4C9297C260F00577DAA /* DNS Proxy Extension */ = {
+			isa = PBXGroup;
+			children = (
+				96B6F4CD297C260F00577DAA /* DNS_Proxy_Extension.entitlements */,
+				96B6F4CC297C260F00577DAA /* Info.plist */,
+				96B6F4CA297C260F00577DAA /* DNSProxyProvider.swift */,
+			);
+			path = "DNS Proxy Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,15 +158,34 @@
 				96B6F4A4297C169600577DAA /* Sources */,
 				96B6F4A5297C169600577DAA /* Frameworks */,
 				96B6F4A6297C169600577DAA /* Resources */,
+				96B6F4D4297C260F00577DAA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				96B6F4CF297C260F00577DAA /* PBXTargetDependency */,
 			);
 			name = "DNS Proxy";
 			productName = "DNS Proxy";
 			productReference = 96B6F4A8297C169600577DAA /* DNS Proxy.app */;
 			productType = "com.apple.product-type.application";
+		};
+		96B6F4C4297C260F00577DAA /* DNS Proxy Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B6F4D1297C260F00577DAA /* Build configuration list for PBXNativeTarget "DNS Proxy Extension" */;
+			buildPhases = (
+				96B6F4C1297C260F00577DAA /* Sources */,
+				96B6F4C2297C260F00577DAA /* Frameworks */,
+				96B6F4C3297C260F00577DAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DNS Proxy Extension";
+			productName = "DNS Proxy Extension";
+			productReference = 96B6F4C5297C260F00577DAA /* DNS Proxy Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -117,6 +198,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					96B6F4A7297C169600577DAA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					96B6F4C4297C260F00577DAA = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -135,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				96B6F4A7297C169600577DAA /* DNS Proxy */,
+				96B6F4C4297C260F00577DAA /* DNS Proxy Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -146,6 +231,13 @@
 			files = (
 				96B6F4B3297C169700577DAA /* Preview Assets.xcassets in Resources */,
 				96B6F4B0297C169700577DAA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B6F4C3297C260F00577DAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +256,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96B6F4C1297C260F00577DAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B6F4CB297C260F00577DAA /* DNSProxyProvider.swift in Sources */,
+				96B6F4D5297C261700577DAA /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96B6F4CF297C260F00577DAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96B6F4C4297C260F00577DAA /* DNS Proxy Extension */;
+			targetProxy = 96B6F4CE297C260F00577DAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		96B6F4B4297C169700577DAA /* Debug */ = {
@@ -284,6 +393,7 @@
 		96B6F4B7297C169700577DAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "DNS Proxy/DNS Proxy.entitlements";
@@ -317,6 +427,7 @@
 		96B6F4B8297C169700577DAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "DNS Proxy/DNS Proxy.entitlements";
@@ -347,6 +458,60 @@
 			};
 			name = Release;
 		};
+		96B6F4D2297C260F00577DAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "DNS Proxy Extension/DNS_Proxy_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JL36X44M34;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DNS Proxy Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "DNS Proxy Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "example.dns.proxy.DNS-Proxy-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96B6F4D3297C260F00577DAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "DNS Proxy Extension/DNS_Proxy_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JL36X44M34;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DNS Proxy Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "DNS Proxy Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "example.dns.proxy.DNS-Proxy-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -364,6 +529,15 @@
 			buildConfigurations = (
 				96B6F4B7297C169700577DAA /* Debug */,
 				96B6F4B8297C169700577DAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B6F4D1297C260F00577DAA /* Build configuration list for PBXNativeTarget "DNS Proxy Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B6F4D2297C260F00577DAA /* Debug */,
+				96B6F4D3297C260F00577DAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -44,7 +44,7 @@ final class DNSProxyManager: NSObject, ObservableObject {
     private func createProxyProtocol() -> NEDNSProxyProviderProtocol {
         let proto = NEDNSProxyProviderProtocol()
         // proto.providerConfiguration = +++
-        proto.providerBundleIdentifier = ""
+        proto.providerBundleIdentifier = "example.dns.proxy.DNS-Proxy-Extension"
         return proto
     }
 
