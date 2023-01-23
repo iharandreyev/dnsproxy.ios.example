@@ -5,6 +5,7 @@
 //  Created by Andreyeu, Ihar on 1/21/23.
 //
 
+import Combine
 import NetworkExtension
 
 final class DNSProxyManager: NSObject, ObservableObject {
@@ -16,10 +17,19 @@ final class DNSProxyManager: NSObject, ObservableObject {
     private(set) var isEnabled: Bool? = nil
     
     static let shared = DNSProxyManager()
+    
+    private var subs: Set<AnyCancellable> = []
 
     private override init() {
         super.init()
         enable()
+        
+        manager.isEnabledPublisher()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] isEnabled in
+                self?.setIsEnabled(isEnabled)
+            })
+            .store(in: &subs)
     }
     
     func enable() {
@@ -27,13 +37,9 @@ final class DNSProxyManager: NSObject, ObservableObject {
             manager.localizedDescription = proxyName
             manager.providerProtocol = createProxyProtocol()
             manager.isEnabled = true
-        } completion: { [unowned self] result in
-            switch result {
-            case let .success(manager):
-                syncState(with: manager)
-            case let .failure(error):
-                Log("Proxy enable failed: \(error)")
-            }
+        } completion: { result in
+            guard case let .failure(error) = result else { return }
+            Log("Proxy enable failed: \(error)")
         }
     }
     
@@ -47,21 +53,10 @@ final class DNSProxyManager: NSObject, ObservableObject {
     func disable() {
         Log("Will disable proxy")
         manager.updateConfiguration { manager in
-            manager.providerProtocol = nil
             manager.isEnabled = false
-        } completion: { [unowned self] result in
-            switch result {
-            case let .success(manager):
-                syncState(with: manager)
-            case let .failure(error):
-                Log("Proxy disable failed: \(error)")
-            }
-        }
-    }
-
-    private func syncState(with manager: NEDNSProxyManager) {
-        DispatchQueue.main.async { [unowned self] in
-            setIsEnabled(manager.isEnabled)
+        } completion: { result in
+            guard case let .failure(error) = result else { return }
+            Log("Proxy enable failed: \(error)")
         }
     }
     
