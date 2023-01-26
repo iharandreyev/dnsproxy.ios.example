@@ -21,7 +21,6 @@
 		96A6E8D32982E11E009F8642 /* URL+Utilties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8D22982E11E009F8642 /* URL+Utilties.swift */; };
 		96A6E8D42982E122009F8642 /* URL+Utilties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8D22982E11E009F8642 /* URL+Utilties.swift */; };
 		96A6E8DB2982E6B7009F8642 /* NEVPNConnection+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8DA2982E6B7009F8642 /* NEVPNConnection+Convenience.swift */; };
-		96A6E8DD2982E6FE009F8642 /* NSError+NEVPNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8DC2982E6FE009F8642 /* NSError+NEVPNError.swift */; };
 		96A6E8DF2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8DE2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift */; };
 		96A6E8E12982E74C009F8642 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8E02982E74C009F8642 /* Constants.swift */; };
 		96A6E8E32982E78F009F8642 /* NETunnelProviderManager+Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */; };
@@ -67,7 +66,6 @@
 		96A6E8CF2982E014009F8642 /* DNSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSConfig.swift; sourceTree = "<group>"; };
 		96A6E8D22982E11E009F8642 /* URL+Utilties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utilties.swift"; sourceTree = "<group>"; };
 		96A6E8DA2982E6B7009F8642 /* NEVPNConnection+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEVPNConnection+Convenience.swift"; sourceTree = "<group>"; };
-		96A6E8DC2982E6FE009F8642 /* NSError+NEVPNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+NEVPNError.swift"; sourceTree = "<group>"; };
 		96A6E8DE2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEVPNStatus+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		96A6E8E02982E74C009F8642 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NETunnelProviderManager+Primary.swift"; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 				96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */,
 				96A6E8DA2982E6B7009F8642 /* NEVPNConnection+Convenience.swift */,
 				96A6E8DE2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift */,
-				96A6E8DC2982E6FE009F8642 /* NSError+NEVPNError.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -355,7 +352,6 @@
 				96A6E8DB2982E6B7009F8642 /* NEVPNConnection+Convenience.swift in Sources */,
 				96B6F4AC297C169600577DAA /* App.swift in Sources */,
 				96A6E8DF2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift in Sources */,
-				96A6E8DD2982E6FE009F8642 /* NSError+NEVPNError.swift in Sources */,
 				96B6F4BD297C1F0A00577DAA /* Logger.swift in Sources */,
 				96A6E8E12982E74C009F8642 /* Constants.swift in Sources */,
 			);

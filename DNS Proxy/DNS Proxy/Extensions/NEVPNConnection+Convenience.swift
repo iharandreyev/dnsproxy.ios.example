@@ -48,7 +48,7 @@ extension NEVPNConnection {
                 return finish(nil)
             }
             if status == .invalid {
-                return finish(NSError(vpnErrorCode: .configurationInvalid))
+                return finish(NEVPNError(.configurationInvalid))
             }
         }
         
