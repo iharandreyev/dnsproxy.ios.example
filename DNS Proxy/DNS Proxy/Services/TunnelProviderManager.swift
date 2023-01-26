@@ -15,6 +15,8 @@ final class TunnelProviderManager: NSObject, ObservableObject {
     
     static let shared = TunnelProviderManager()
     
+    private var manager: NETunnelProviderManager?
+    
     private override init() {
         super.init()
         enable(forced: true)
@@ -22,27 +24,41 @@ final class TunnelProviderManager: NSObject, ObservableObject {
     
     func enable(forced: Bool = false) {
         guard isEnabled == false || forced else { return }
-        
+
         isEnabled = nil
         
-        Log("Will enable tunnel")
-        NETunnelProviderManager.primary { [weak self] result in
-            guard let self else { return }
-            
-            switch result {
-            case let .failure(error):
-                Log("Tunnel manager get failed: \(error)")
-                self.isEnabled = false
-                return
-            case let .success(primary):
-                self.enable(with: primary)
-                return
+        if let manager {
+            Log("Will start tunnel")
+            return enable(with: manager)
+        }
+ 
+        Log("Will load tunnel manager")
+        
+        NETunnelProviderManager.loadAllFromPreferences { [weak self] managers, loadError in
+            if let loadError {
+                return Log("Can't retrieve tunnel manager: \(loadError)")
             }
+            
+            guard let manager = managers?.first else {
+                return Log("No tunnel managers loaded")
+            }
+            
+            self?.manager = manager
+            
+            Log("Did load tunnel manager")
+            
+            self?.enable(forced: true)
         }
     }
     
     private func enable(with manager: NETunnelProviderManager) {
-        manager.protocolConfiguration = NETunnelProviderProtocol.preferred
+        let proto = NETunnelProviderProtocol()
+        proto.providerConfiguration = [:]
+        proto.providerBundleIdentifier = Constants.tunnelProviderID
+        proto.serverAddress = "localhost"
+        proto.disconnectOnSleep = false
+        
+        manager.protocolConfiguration = proto
         manager.isEnabled = true
         manager.localizedDescription = Constants.tunnelProviderID
 //        manager.onDemandRules = DNSConfig.google().onDemandRules
@@ -53,10 +69,10 @@ final class TunnelProviderManager: NSObject, ObservableObject {
             }
             
             if let error {
-                return Log("Tunnel manager save before enable failed: \(error)")
+                return Log("Failed to save start preferences: \(error)")
             }
 
-            manager.connection.startVPN { [weak self] error in
+            manager.startVPN { [weak self] error in
                 guard let self else {
                     return Log("Error, object deallocated")
                 }
@@ -74,25 +90,12 @@ final class TunnelProviderManager: NSObject, ObservableObject {
     }
     
     func disable() {
-        guard isEnabled == true else { return }
+        guard isEnabled == true, let manager else { return }
         
         isEnabled = nil
         
-        Log("Will disable tunnel")
-        
-        NETunnelProviderManager.primary { [weak self] result in
-            guard let self else { return }
-            
-            switch result {
-            case let .failure(error):
-                Log("\(error)")
-                self.isEnabled = false
-                return
-            case let .success(manager):
-                self.disable(with: manager)
-                return
-            }
-        }
+        Log("Will stop tunnel")
+        disable(with: manager)
     }
     
     private func disable(with manager: NETunnelProviderManager) {
@@ -104,12 +107,12 @@ final class TunnelProviderManager: NSObject, ObservableObject {
             }
             
             if let error {
-                Log("Tunnel manager save before disable failed: \(error)")
+                Log("Failed to save stop preferences: \(error)")
                 self.isEnabled = false
                 return
             }
             
-            manager.connection.stopVPN { [weak self] error in
+            manager.stopVPN { [weak self] error in
                 guard let self else {
                     return Log("Error, object deallocated")
                 }
@@ -125,15 +128,4 @@ final class TunnelProviderManager: NSObject, ObservableObject {
             }
         }
     }
-}
-
-extension NETunnelProviderProtocol {
-    static let preferred: NETunnelProviderProtocol = {
-        let proto = NETunnelProviderProtocol()
-        proto.providerConfiguration = [:]
-        proto.providerBundleIdentifier = Constants.tunnelProviderID
-        proto.serverAddress = "localhost"
-        proto.disconnectOnSleep = false
-        return proto
-    }()
 }

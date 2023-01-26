@@ -8,20 +8,20 @@
 import Foundation
 import NetworkExtension
 
-extension NEVPNConnection {
+extension NETunnelProviderManager {
     private func addConnectionStatusObserver(_ body: @escaping (NEVPNStatus) -> Void) -> NSObjectProtocol {
         NotificationCenter.default.addObserver(
             forName: .NEVPNStatusDidChange,
-            object: self,
+            object: connection,
             queue: OperationQueue.main
-        ) { [weak self] _ in
-            guard let self else { return }
-            body(self.status)
+        ) { [weak connection] _ in
+            guard let connection else { return }
+            body(connection.status)
         }
     }
     
     private func removeConnectionStatusObserver(_ observer: Any) {
-        NotificationCenter.default.removeObserver(observer, name: .NEVPNStatusDidChange, object: self)
+        NotificationCenter.default.removeObserver(observer, name: .NEVPNStatusDidChange, object: connection)
     }
     
     private func waitForConnectionStatus(
@@ -59,9 +59,9 @@ extension NEVPNConnection {
     }
     
     func startVPN(_ completion: @escaping (Error?) -> Void) {
-        if status == .disconnected {
+        if connection.status == .disconnected {
             do {
-                try startVPNTunnel()
+                try connection.startVPNTunnel()
             } catch {
                 return completion(error)
             }
@@ -71,8 +71,8 @@ extension NEVPNConnection {
     }
     
     func stopVPN(_ completion: @escaping (Error?) -> Void) {
-        if status == .connected {
-            stopVPNTunnel()
+        if connection.status == .connected {
+            connection.stopVPNTunnel()
         }
         
         waitForConnectionStatus(.disconnected, completion: completion)
