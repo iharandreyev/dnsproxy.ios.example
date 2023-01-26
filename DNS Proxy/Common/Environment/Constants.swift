@@ -9,11 +9,7 @@ import Foundation
 
 enum Constants {
     static var bundleName: String {
-        guard let name = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String else {
-            assertionFailure("Bundle name is missing")
-            return ""
-        }
-        return name
+        Bundle.main.name()
     }
     
     static var tunnelProviderID: String {

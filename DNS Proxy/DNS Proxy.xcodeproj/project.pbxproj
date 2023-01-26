@@ -26,6 +26,9 @@
 		96A6E8E32982E78F009F8642 /* NETunnelProviderManager+Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */; };
 		96A6E8ED2982F4A3009F8642 /* TunnelOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8EC2982F4A3009F8642 /* TunnelOption.swift */; };
 		96A6E8EE2982F4A3009F8642 /* TunnelOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8EC2982F4A3009F8642 /* TunnelOption.swift */; };
+		96A6E8F02982F9D6009F8642 /* Bundle+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8EF2982F9D6009F8642 /* Bundle+Convenience.swift */; };
+		96A6E8F12982F9D6009F8642 /* Bundle+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8EF2982F9D6009F8642 /* Bundle+Convenience.swift */; };
+		96A6E8F229830279009F8642 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8E02982E74C009F8642 /* Constants.swift */; };
 		96B6F4AC297C169600577DAA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AB297C169600577DAA /* App.swift */; };
 		96B6F4AE297C169600577DAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AD297C169600577DAA /* ContentView.swift */; };
 		96B6F4B0297C169700577DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B6F4AF297C169700577DAA /* Assets.xcassets */; };
@@ -72,6 +75,7 @@
 		96A6E8E02982E74C009F8642 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NETunnelProviderManager+Primary.swift"; sourceTree = "<group>"; };
 		96A6E8EC2982F4A3009F8642 /* TunnelOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelOption.swift; sourceTree = "<group>"; };
+		96A6E8EF2982F9D6009F8642 /* Bundle+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Convenience.swift"; sourceTree = "<group>"; };
 		96B6F4A8297C169600577DAA /* DNS Proxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DNS Proxy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B6F4AB297C169600577DAA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		96B6F4AD297C169600577DAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				968568D529828CEE007F7D2A /* NSError+Convenience.swift */,
 				968568D729828D31007F7D2A /* Result+Convenience.swift */,
 				96A6E8D22982E11E009F8642 /* URL+Utilties.swift */,
+				96A6E8EF2982F9D6009F8642 /* Bundle+Convenience.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -338,8 +343,10 @@
 				96A6E8D02982E014009F8642 /* DNSConfig.swift in Sources */,
 				96A6E8EE2982F4A3009F8642 /* TunnelOption.swift in Sources */,
 				968568DA29828D37007F7D2A /* NSError+Convenience.swift in Sources */,
+				96A6E8F12982F9D6009F8642 /* Bundle+Convenience.swift in Sources */,
 				968568C9298289E5007F7D2A /* PacketTunnelProvider.swift in Sources */,
 				968568DB29828D39007F7D2A /* Logger.swift in Sources */,
+				96A6E8F229830279009F8642 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +365,7 @@
 				96A6E8DB2982E6B7009F8642 /* NETunnelProviderManager+VPNConnection.swift in Sources */,
 				96B6F4AC297C169600577DAA /* App.swift in Sources */,
 				96A6E8DF2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift in Sources */,
+				96A6E8F02982F9D6009F8642 /* Bundle+Convenience.swift in Sources */,
 				96B6F4BD297C1F0A00577DAA /* Logger.swift in Sources */,
 				96A6E8E12982E74C009F8642 /* Constants.swift in Sources */,
 			);
