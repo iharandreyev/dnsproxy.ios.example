@@ -29,21 +29,13 @@ enum DNSProvider: Int, CaseIterable, Hashable, CustomStringConvertible {
     }
 }
 
-struct DNSConfig: Equatable {
+struct DNSConfig {
     /// An object that contains the configuration settings for a DNS server.
-    var settings: NEDNSSettings?
+    var settings: NEDNSOverHTTPSSettings
     /// A string that contains the display name of the DNS settings configuration.
-    var localizedDescription: String?
+    var localizedDescription: String
     /// A list of ordered rules that defines the networks on which the DNS settings will apply.
-    var onDemandRules: [NEOnDemandRule]?
-    
-    static func == (lhs: Self, rhs: Self) -> Bool {
-        // TODO: - Update
-        guard lhs.localizedDescription == rhs.localizedDescription else { return false }
-        guard lhs.settings?.servers == rhs.settings?.servers else { return false }
-        guard lhs.onDemandRules?.count == rhs.onDemandRules?.count else { return false }
-        return true
-    }
+    var onDemandRules: [NEOnDemandRule]
 }
 
 extension DNSConfig {
@@ -62,13 +54,7 @@ extension DNSConfig {
         let settings = NEDNSOverHTTPSSettings(servers: servers)
         settings.serverURL = serverURL
         
-        var config = DNSConfig()
-        config.settings = settings
-        config.localizedDescription = "Quad9"
-        
-        config.onDemandRules = .testRules()
-        
-        return config
+        return DNSConfig(settings: settings, localizedDescription: "Quad9", onDemandRules: .testRules())
     }
     
     static func google() -> DNSConfig {
@@ -82,14 +68,8 @@ extension DNSConfig {
 
         let settings = NEDNSOverHTTPSSettings(servers: dnsIPS)
         settings.serverURL = serverURL
-        
-        var config = DNSConfig()
-        config.settings = settings
-        config.localizedDescription = "Google"
-        
-        config.onDemandRules = .testRules()
-        
-        return config
+
+        return DNSConfig(settings: settings, localizedDescription: "Google", onDemandRules: .testRules())
     }
 }
 
