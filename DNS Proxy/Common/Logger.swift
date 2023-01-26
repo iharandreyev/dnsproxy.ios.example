@@ -7,6 +7,6 @@
 
 import Foundation
 
-func Log(_ values: Any..., prefix: String = "[DNS Proxy]") {
+func Log(_ values: Any..., prefix: String = "[DNS Tunnel]") {
     NSLog(prefix + ": " + values.map { "\($0)" }.joined(separator: " "))
 }

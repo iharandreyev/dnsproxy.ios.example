@@ -60,7 +60,7 @@ final class ContentViewStore: ObservableObject {
     
     private var subs: Set<AnyCancellable> = []
     
-    private let proxy = DNSProxyManager.shared
+    private let proxy = TunnelProviderManager.shared
     
     init() {
         proxy.$isEnabled

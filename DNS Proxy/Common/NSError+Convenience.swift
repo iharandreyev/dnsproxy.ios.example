@@ -1,8 +1,8 @@
 //
-//  NSError+Extension.swift
-//  DNS Proxy Extension
+//  NSError+Convenience.swift
+//  DNS Proxy
 //
-//  Created by Andreyeu, Ihar on 1/25/23.
+//  Created by Andreyeu, Ihar on 1/26/23.
 //
 
 import Foundation
@@ -14,5 +14,9 @@ extension NSError {
     
     static func cancel<T>(thrownBy objectType: T.Type) -> NSError {
         NSError(domain: "\(objectType)", code: -999, userInfo: [NSLocalizedDescriptionKey: "Cancelled"])
+    }
+    
+    static func timeout<T>(thrownBy objectType: T.Type) -> NSError {
+        NSError(domain: "\(objectType)", code: -1, userInfo: [NSLocalizedDescriptionKey: "Timeout"])
     }
 }

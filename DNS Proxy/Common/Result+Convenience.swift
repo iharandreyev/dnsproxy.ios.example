@@ -1,8 +1,8 @@
 //
 //  Result+Convenience.swift
-//  DNS Proxy Extension
+//  DNS Proxy
 //
-//  Created by Andreyeu, Ihar on 1/25/23.
+//  Created by Andreyeu, Ihar on 1/26/23.
 //
 
 import Foundation

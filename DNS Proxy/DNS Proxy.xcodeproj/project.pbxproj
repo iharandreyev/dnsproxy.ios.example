@@ -7,35 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9685689C298026A6007F7D2A /* Datagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685689B298026A6007F7D2A /* Datagram.swift */; };
-		9685689E29814A38007F7D2A /* Collection+Parallel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685689D29814A38007F7D2A /* Collection+Parallel.swift */; };
-		968568A129815744007F7D2A /* NSError+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568A029815744007F7D2A /* NSError+Convenience.swift */; };
-		968568A329815767007F7D2A /* NWConnection+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568A229815767007F7D2A /* NWConnection+Convenience.swift */; };
-		968568A529815800007F7D2A /* DatagramConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568A429815800007F7D2A /* DatagramConnection.swift */; };
-		968568A729815990007F7D2A /* NEAppProxyUDPFlow+Datagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568A629815990007F7D2A /* NEAppProxyUDPFlow+Datagram.swift */; };
-		968568A9298159A2007F7D2A /* Result+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568A8298159A2007F7D2A /* Result+Convenience.swift */; };
-		968568AB298159DC007F7D2A /* NEAppProxyFlow+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568AA298159DC007F7D2A /* NEAppProxyFlow+Convenience.swift */; };
-		968568AD29815A30007F7D2A /* CheckedContinuation+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568AC29815A30007F7D2A /* CheckedContinuation+Convenience.swift */; };
+		968568C6298289E5007F7D2A /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B6F4C7297C260F00577DAA /* NetworkExtension.framework */; };
+		968568C9298289E5007F7D2A /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568C8298289E5007F7D2A /* PacketTunnelProvider.swift */; };
+		968568CE298289E5007F7D2A /* DNS Packet Tunnel Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 968568C5298289E5007F7D2A /* DNS Packet Tunnel Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		968568D429828BBF007F7D2A /* TunnelProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568D329828BBF007F7D2A /* TunnelProviderManager.swift */; };
+		968568D629828CEE007F7D2A /* NSError+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568D529828CEE007F7D2A /* NSError+Convenience.swift */; };
+		968568D829828D31007F7D2A /* Result+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568D729828D31007F7D2A /* Result+Convenience.swift */; };
+		968568D929828D37007F7D2A /* Result+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568D729828D31007F7D2A /* Result+Convenience.swift */; };
+		968568DA29828D37007F7D2A /* NSError+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968568D529828CEE007F7D2A /* NSError+Convenience.swift */; };
+		968568DB29828D39007F7D2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BC297C1F0A00577DAA /* Logger.swift */; };
+		96A6E8D02982E014009F8642 /* DNSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8CF2982E014009F8642 /* DNSConfig.swift */; };
+		96A6E8D12982E08C009F8642 /* DNSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8CF2982E014009F8642 /* DNSConfig.swift */; };
+		96A6E8D32982E11E009F8642 /* URL+Utilties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8D22982E11E009F8642 /* URL+Utilties.swift */; };
+		96A6E8D42982E122009F8642 /* URL+Utilties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8D22982E11E009F8642 /* URL+Utilties.swift */; };
 		96B6F4AC297C169600577DAA /* DNS_ProxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */; };
 		96B6F4AE297C169600577DAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AD297C169600577DAA /* ContentView.swift */; };
 		96B6F4B0297C169700577DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B6F4AF297C169700577DAA /* Assets.xcassets */; };
 		96B6F4B3297C169700577DAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B6F4B2297C169700577DAA /* Preview Assets.xcassets */; };
-		96B6F4BB297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */; };
 		96B6F4BD297C1F0A00577DAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BC297C1F0A00577DAA /* Logger.swift */; };
-		96B6F4BF297C1FD600577DAA /* DNSProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */; };
-		96B6F4C8297C260F00577DAA /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B6F4C7297C260F00577DAA /* NetworkExtension.framework */; };
-		96B6F4CB297C260F00577DAA /* DNSProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4CA297C260F00577DAA /* DNSProxyProvider.swift */; };
-		96B6F4D0297C260F00577DAA /* DNS Proxy Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 96B6F4C5297C260F00577DAA /* DNS Proxy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		96B6F4D5297C261700577DAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4BC297C1F0A00577DAA /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		96B6F4CE297C260F00577DAA /* PBXContainerItemProxy */ = {
+		968568CC298289E5007F7D2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 96B6F4A0297C169600577DAA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 96B6F4C4297C260F00577DAA;
-			remoteInfo = "DNS Proxy Extension";
+			remoteGlobalIDString = 968568C4298289E5007F7D2A;
+			remoteInfo = "DNS Packet Tunnel Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				96B6F4D0297C260F00577DAA /* DNS Proxy Extension.appex in Embed Foundation Extensions */,
+				968568CE298289E5007F7D2A /* DNS Packet Tunnel Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,32 +52,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9685689B298026A6007F7D2A /* Datagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datagram.swift; sourceTree = "<group>"; };
-		9685689D29814A38007F7D2A /* Collection+Parallel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Parallel.swift"; sourceTree = "<group>"; };
-		968568A029815744007F7D2A /* NSError+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Convenience.swift"; sourceTree = "<group>"; };
-		968568A229815767007F7D2A /* NWConnection+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NWConnection+Convenience.swift"; sourceTree = "<group>"; };
-		968568A429815800007F7D2A /* DatagramConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatagramConnection.swift; sourceTree = "<group>"; };
-		968568A629815990007F7D2A /* NEAppProxyUDPFlow+Datagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEAppProxyUDPFlow+Datagram.swift"; sourceTree = "<group>"; };
-		968568A8298159A2007F7D2A /* Result+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Convenience.swift"; sourceTree = "<group>"; };
-		968568AA298159DC007F7D2A /* NEAppProxyFlow+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEAppProxyFlow+Convenience.swift"; sourceTree = "<group>"; };
-		968568AC29815A30007F7D2A /* CheckedContinuation+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckedContinuation+Convenience.swift"; sourceTree = "<group>"; };
+		968568C5298289E5007F7D2A /* DNS Packet Tunnel Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DNS Packet Tunnel Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		968568C8298289E5007F7D2A /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		968568CA298289E5007F7D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968568CB298289E5007F7D2A /* DNS_Packet_Tunnel_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNS_Packet_Tunnel_Extension.entitlements; sourceTree = "<group>"; };
+		968568D329828BBF007F7D2A /* TunnelProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelProviderManager.swift; sourceTree = "<group>"; };
+		968568D529828CEE007F7D2A /* NSError+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Convenience.swift"; sourceTree = "<group>"; };
+		968568D729828D31007F7D2A /* Result+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Convenience.swift"; sourceTree = "<group>"; };
+		96A6E8CF2982E014009F8642 /* DNSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSConfig.swift; sourceTree = "<group>"; };
+		96A6E8D22982E11E009F8642 /* URL+Utilties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utilties.swift"; sourceTree = "<group>"; };
 		96B6F4A8297C169600577DAA /* DNS Proxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DNS Proxy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNS_ProxyApp.swift; sourceTree = "<group>"; };
 		96B6F4AD297C169600577DAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96B6F4AF297C169700577DAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96B6F4B2297C169700577DAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96B6F4B9297C16AA00577DAA /* DNS Proxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DNS Proxy.entitlements"; sourceTree = "<group>"; };
-		96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEDNSProxyManager+Utilities.swift"; sourceTree = "<group>"; };
 		96B6F4BC297C1F0A00577DAA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyManager.swift; sourceTree = "<group>"; };
-		96B6F4C5297C260F00577DAA /* DNS Proxy Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DNS Proxy Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B6F4C7297C260F00577DAA /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
-		96B6F4CA297C260F00577DAA /* DNSProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyProvider.swift; sourceTree = "<group>"; };
-		96B6F4CC297C260F00577DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96B6F4CD297C260F00577DAA /* DNS_Proxy_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNS_Proxy_Extension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		968568C2298289E5007F7D2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968568C6298289E5007F7D2A /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96B6F4A5297C169600577DAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,38 +87,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96B6F4C2297C260F00577DAA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				96B6F4C8297C260F00577DAA /* NetworkExtension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9685689F29815738007F7D2A /* Extensions */ = {
+		968568C7298289E5007F7D2A /* DNS Packet Tunnel Extension */ = {
 			isa = PBXGroup;
 			children = (
-				968568AC29815A30007F7D2A /* CheckedContinuation+Convenience.swift */,
-				9685689D29814A38007F7D2A /* Collection+Parallel.swift */,
-				968568AA298159DC007F7D2A /* NEAppProxyFlow+Convenience.swift */,
-				968568A629815990007F7D2A /* NEAppProxyUDPFlow+Datagram.swift */,
-				968568A029815744007F7D2A /* NSError+Convenience.swift */,
-				968568A229815767007F7D2A /* NWConnection+Convenience.swift */,
-				968568A8298159A2007F7D2A /* Result+Convenience.swift */,
+				968568C8298289E5007F7D2A /* PacketTunnelProvider.swift */,
+				968568CA298289E5007F7D2A /* Info.plist */,
+				968568CB298289E5007F7D2A /* DNS_Packet_Tunnel_Extension.entitlements */,
 			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		968568AE29815CE6007F7D2A /* UDP */ = {
-			isa = PBXGroup;
-			children = (
-				9685689B298026A6007F7D2A /* Datagram.swift */,
-				968568A429815800007F7D2A /* DatagramConnection.swift */,
-			);
-			path = UDP;
+			path = "DNS Packet Tunnel Extension";
 			sourceTree = "<group>";
 		};
 		96B6F49F297C169600577DAA = {
@@ -126,7 +105,7 @@
 			children = (
 				96B6F4C0297C25F400577DAA /* Common */,
 				96B6F4AA297C169600577DAA /* DNS Proxy */,
-				96B6F4C9297C260F00577DAA /* DNS Proxy Extension */,
+				968568C7298289E5007F7D2A /* DNS Packet Tunnel Extension */,
 				96B6F4C6297C260F00577DAA /* Frameworks */,
 				96B6F4A9297C169600577DAA /* Products */,
 			);
@@ -136,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				96B6F4A8297C169600577DAA /* DNS Proxy.app */,
-				96B6F4C5297C260F00577DAA /* DNS Proxy Extension.appex */,
+				968568C5298289E5007F7D2A /* DNS Packet Tunnel Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,10 +126,9 @@
 				96B6F4B9297C16AA00577DAA /* DNS Proxy.entitlements */,
 				96B6F4AD297C169600577DAA /* ContentView.swift */,
 				96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */,
-				96B6F4BE297C1FD600577DAA /* DNSProxyManager.swift */,
-				96B6F4BA297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift */,
 				96B6F4AF297C169700577DAA /* Assets.xcassets */,
 				96B6F4B1297C169700577DAA /* Preview Content */,
+				968568D329828BBF007F7D2A /* TunnelProviderManager.swift */,
 			);
 			path = "DNS Proxy";
 			sourceTree = "<group>";
@@ -167,6 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				96B6F4BC297C1F0A00577DAA /* Logger.swift */,
+				968568D529828CEE007F7D2A /* NSError+Convenience.swift */,
+				968568D729828D31007F7D2A /* Result+Convenience.swift */,
+				96A6E8D22982E11E009F8642 /* URL+Utilties.swift */,
+				96A6E8CF2982E014009F8642 /* DNSConfig.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -179,21 +161,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		96B6F4C9297C260F00577DAA /* DNS Proxy Extension */ = {
-			isa = PBXGroup;
-			children = (
-				96B6F4CD297C260F00577DAA /* DNS_Proxy_Extension.entitlements */,
-				96B6F4CA297C260F00577DAA /* DNSProxyProvider.swift */,
-				9685689F29815738007F7D2A /* Extensions */,
-				96B6F4CC297C260F00577DAA /* Info.plist */,
-				968568AE29815CE6007F7D2A /* UDP */,
-			);
-			path = "DNS Proxy Extension";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		968568C4298289E5007F7D2A /* DNS Packet Tunnel Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968568CF298289E5007F7D2A /* Build configuration list for PBXNativeTarget "DNS Packet Tunnel Extension" */;
+			buildPhases = (
+				968568C1298289E5007F7D2A /* Sources */,
+				968568C2298289E5007F7D2A /* Frameworks */,
+				968568C3298289E5007F7D2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DNS Packet Tunnel Extension";
+			productName = "DNS Packet Tunnel Extension";
+			productReference = 968568C5298289E5007F7D2A /* DNS Packet Tunnel Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		96B6F4A7297C169600577DAA /* DNS Proxy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96B6F4B6297C169700577DAA /* Build configuration list for PBXNativeTarget "DNS Proxy" */;
@@ -206,29 +193,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				96B6F4CF297C260F00577DAA /* PBXTargetDependency */,
+				968568CD298289E5007F7D2A /* PBXTargetDependency */,
 			);
 			name = "DNS Proxy";
 			productName = "DNS Proxy";
 			productReference = 96B6F4A8297C169600577DAA /* DNS Proxy.app */;
 			productType = "com.apple.product-type.application";
-		};
-		96B6F4C4297C260F00577DAA /* DNS Proxy Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96B6F4D1297C260F00577DAA /* Build configuration list for PBXNativeTarget "DNS Proxy Extension" */;
-			buildPhases = (
-				96B6F4C1297C260F00577DAA /* Sources */,
-				96B6F4C2297C260F00577DAA /* Frameworks */,
-				96B6F4C3297C260F00577DAA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "DNS Proxy Extension";
-			productName = "DNS Proxy Extension";
-			productReference = 96B6F4C5297C260F00577DAA /* DNS Proxy Extension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -240,10 +210,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					96B6F4A7297C169600577DAA = {
+					968568C4298289E5007F7D2A = {
 						CreatedOnToolsVersion = 14.2;
 					};
-					96B6F4C4297C260F00577DAA = {
+					96B6F4A7297C169600577DAA = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -262,12 +232,19 @@
 			projectRoot = "";
 			targets = (
 				96B6F4A7297C169600577DAA /* DNS Proxy */,
-				96B6F4C4297C260F00577DAA /* DNS Proxy Extension */,
+				968568C4298289E5007F7D2A /* DNS Packet Tunnel Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		968568C3298289E5007F7D2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96B6F4A6297C169600577DAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,57 +254,102 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96B6F4C3297C260F00577DAA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		968568C1298289E5007F7D2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A6E8D32982E11E009F8642 /* URL+Utilties.swift in Sources */,
+				968568D929828D37007F7D2A /* Result+Convenience.swift in Sources */,
+				96A6E8D02982E014009F8642 /* DNSConfig.swift in Sources */,
+				968568DA29828D37007F7D2A /* NSError+Convenience.swift in Sources */,
+				968568C9298289E5007F7D2A /* PacketTunnelProvider.swift in Sources */,
+				968568DB29828D39007F7D2A /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96B6F4A4297C169600577DAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968568D629828CEE007F7D2A /* NSError+Convenience.swift in Sources */,
 				96B6F4AE297C169600577DAA /* ContentView.swift in Sources */,
-				96B6F4BB297C1EF000577DAA /* NEDNSProxyManager+Utilities.swift in Sources */,
-				96B6F4BF297C1FD600577DAA /* DNSProxyManager.swift in Sources */,
+				96A6E8D12982E08C009F8642 /* DNSConfig.swift in Sources */,
+				968568D829828D31007F7D2A /* Result+Convenience.swift in Sources */,
+				968568D429828BBF007F7D2A /* TunnelProviderManager.swift in Sources */,
+				96A6E8D42982E122009F8642 /* URL+Utilties.swift in Sources */,
 				96B6F4AC297C169600577DAA /* DNS_ProxyApp.swift in Sources */,
 				96B6F4BD297C1F0A00577DAA /* Logger.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		96B6F4C1297C260F00577DAA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				968568AB298159DC007F7D2A /* NEAppProxyFlow+Convenience.swift in Sources */,
-				9685689E29814A38007F7D2A /* Collection+Parallel.swift in Sources */,
-				9685689C298026A6007F7D2A /* Datagram.swift in Sources */,
-				968568A529815800007F7D2A /* DatagramConnection.swift in Sources */,
-				968568A9298159A2007F7D2A /* Result+Convenience.swift in Sources */,
-				96B6F4CB297C260F00577DAA /* DNSProxyProvider.swift in Sources */,
-				968568A729815990007F7D2A /* NEAppProxyUDPFlow+Datagram.swift in Sources */,
-				968568A129815744007F7D2A /* NSError+Convenience.swift in Sources */,
-				968568A329815767007F7D2A /* NWConnection+Convenience.swift in Sources */,
-				968568AD29815A30007F7D2A /* CheckedContinuation+Convenience.swift in Sources */,
-				96B6F4D5297C261700577DAA /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		96B6F4CF297C260F00577DAA /* PBXTargetDependency */ = {
+		968568CD298289E5007F7D2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96B6F4C4297C260F00577DAA /* DNS Proxy Extension */;
-			targetProxy = 96B6F4CE297C260F00577DAA /* PBXContainerItemProxy */;
+			target = 968568C4298289E5007F7D2A /* DNS Packet Tunnel Extension */;
+			targetProxy = 968568CC298289E5007F7D2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		968568D0298289E5007F7D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "DNS Packet Tunnel Extension/DNS_Packet_Tunnel_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JL36X44M34;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DNS Packet Tunnel Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "DNS Packet Tunnel Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "example.dns.proxy.DNS-Packet-Tunnel-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		968568D1298289E5007F7D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "DNS Packet Tunnel Extension/DNS_Packet_Tunnel_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JL36X44M34;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DNS Packet Tunnel Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "DNS Packet Tunnel Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "example.dns.proxy.DNS-Packet-Tunnel-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		96B6F4B4297C169700577DAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -510,63 +532,18 @@
 			};
 			name = Release;
 		};
-		96B6F4D2297C260F00577DAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "DNS Proxy Extension/DNS_Proxy_Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JL36X44M34;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "DNS Proxy Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "DNS Proxy Extension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "example.dns.proxy.DNS-Proxy-Extension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		96B6F4D3297C260F00577DAA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "DNS Proxy Extension/DNS_Proxy_Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JL36X44M34;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "DNS Proxy Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "DNS Proxy Extension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "example.dns.proxy.DNS-Proxy-Extension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		968568CF298289E5007F7D2A /* Build configuration list for PBXNativeTarget "DNS Packet Tunnel Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968568D0298289E5007F7D2A /* Debug */,
+				968568D1298289E5007F7D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		96B6F4A3297C169600577DAA /* Build configuration list for PBXProject "DNS Proxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -581,15 +558,6 @@
 			buildConfigurations = (
 				96B6F4B7297C169700577DAA /* Debug */,
 				96B6F4B8297C169700577DAA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		96B6F4D1297C260F00577DAA /* Build configuration list for PBXNativeTarget "DNS Proxy Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				96B6F4D2297C260F00577DAA /* Debug */,
-				96B6F4D3297C260F00577DAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
