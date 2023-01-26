@@ -36,7 +36,7 @@ final class TunnelProviderManager: NSObject, ObservableObject {
         
         NETunnelProviderManager.loadAllFromPreferences { [weak self] managers, loadError in
             if let loadError {
-                return Log("Can't retrieve tunnel manager: \(loadError)")
+                return LogError("Can't retrieve tunnel manager", loadError)
             }
             
             guard let manager = managers?.first else {
@@ -72,7 +72,7 @@ final class TunnelProviderManager: NSObject, ObservableObject {
             }
             
             if let error {
-                return Log("Failed to save start preferences: \(error)")
+                return LogError("Failed to save start preferences", error)
             }
 
             manager.startVPN { [weak self] error in
@@ -81,7 +81,7 @@ final class TunnelProviderManager: NSObject, ObservableObject {
                 }
                 
                 if let error {
-                    Log("Failed to start tunnel: \(error)")
+                    LogError("Failed to start tunnel", error)
                     self.isEnabled = false
                     return
                 }
@@ -110,7 +110,7 @@ final class TunnelProviderManager: NSObject, ObservableObject {
             }
             
             if let error {
-                Log("Failed to save stop preferences: \(error)")
+                LogError("Failed to save stop preferences", error)
                 self.isEnabled = false
                 return
             }
@@ -121,7 +121,7 @@ final class TunnelProviderManager: NSObject, ObservableObject {
                 }
                 
                 if let error {
-                    Log("Failed to stop tunnel: \(error)")
+                    LogError("Failed to stop tunnel", error)
                     self.isEnabled = false
                     return
                 }

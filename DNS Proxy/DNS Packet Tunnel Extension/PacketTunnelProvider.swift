@@ -8,7 +8,13 @@
 import NetworkExtension
 
 class PacketTunnelProvider: NEPacketTunnelProvider {
-
+    override init() {
+        if case .none = Logger.shared {
+            Logger.shared = Logger(category: "extension")
+        }
+        super.init()
+    }
+    
     override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
         return completionHandler(nil)
         
@@ -20,7 +26,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                 completionHandler(error)
             }
         } catch {
-            Log("\(error)")
+            LogError("Tunnel start failed", error)
             return completionHandler(error)
         }
     }

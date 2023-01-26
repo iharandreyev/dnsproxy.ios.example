@@ -9,6 +9,12 @@ import SwiftUI
 
 @main
 struct App: SwiftUI.App {
+    init() {
+        if case .none = Logger.shared {
+            Logger.shared = Logger(category: "app")
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
