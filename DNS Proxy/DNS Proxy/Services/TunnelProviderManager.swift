@@ -52,16 +52,19 @@ final class TunnelProviderManager: NSObject, ObservableObject {
     }
     
     private func enable(with manager: NETunnelProviderManager) {
+        let config = DNSConfig.google()
+        let options = TunnelOptions(tunnelRemoteAddress: "localhost", dnsSettings: config.settings)
+        
         let proto = NETunnelProviderProtocol()
-        proto.providerConfiguration = [:]
+        proto.providerConfiguration = options.eraseToAnyDictionary()
         proto.providerBundleIdentifier = Constants.tunnelProviderID
-        proto.serverAddress = "localhost"
+        proto.serverAddress = options.tunnelRemoteAddress
         proto.disconnectOnSleep = false
         
         manager.protocolConfiguration = proto
         manager.isEnabled = true
         manager.localizedDescription = Constants.tunnelProviderID
-//        manager.onDemandRules = DNSConfig.google().onDemandRules
+        manager.onDemandRules = config.onDemandRules
         
         manager.saveToPreferences { [weak self, weak manager] error in
             guard let self, let manager else {

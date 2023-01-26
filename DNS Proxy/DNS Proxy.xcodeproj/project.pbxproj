@@ -24,6 +24,8 @@
 		96A6E8DF2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8DE2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift */; };
 		96A6E8E12982E74C009F8642 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8E02982E74C009F8642 /* Constants.swift */; };
 		96A6E8E32982E78F009F8642 /* NETunnelProviderManager+Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */; };
+		96A6E8ED2982F4A3009F8642 /* TunnelOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8EC2982F4A3009F8642 /* TunnelOption.swift */; };
+		96A6E8EE2982F4A3009F8642 /* TunnelOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8EC2982F4A3009F8642 /* TunnelOption.swift */; };
 		96B6F4AC297C169600577DAA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AB297C169600577DAA /* App.swift */; };
 		96B6F4AE297C169600577DAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AD297C169600577DAA /* ContentView.swift */; };
 		96B6F4B0297C169700577DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B6F4AF297C169700577DAA /* Assets.xcassets */; };
@@ -69,6 +71,7 @@
 		96A6E8DE2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEVPNStatus+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		96A6E8E02982E74C009F8642 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NETunnelProviderManager+Primary.swift"; sourceTree = "<group>"; };
+		96A6E8EC2982F4A3009F8642 /* TunnelOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelOption.swift; sourceTree = "<group>"; };
 		96B6F4A8297C169600577DAA /* DNS Proxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DNS Proxy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B6F4AB297C169600577DAA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		96B6F4AD297C169600577DAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 			children = (
 				96B6F4BC297C1F0A00577DAA /* Logger.swift */,
 				96A6E8E02982E74C009F8642 /* Constants.swift */,
+				96A6E8EC2982F4A3009F8642 /* TunnelOption.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -332,6 +336,7 @@
 				96A6E8D32982E11E009F8642 /* URL+Utilties.swift in Sources */,
 				968568D929828D37007F7D2A /* Result+Convenience.swift in Sources */,
 				96A6E8D02982E014009F8642 /* DNSConfig.swift in Sources */,
+				96A6E8EE2982F4A3009F8642 /* TunnelOption.swift in Sources */,
 				968568DA29828D37007F7D2A /* NSError+Convenience.swift in Sources */,
 				968568C9298289E5007F7D2A /* PacketTunnelProvider.swift in Sources */,
 				968568DB29828D39007F7D2A /* Logger.swift in Sources */,
@@ -343,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				968568D629828CEE007F7D2A /* NSError+Convenience.swift in Sources */,
+				96A6E8ED2982F4A3009F8642 /* TunnelOption.swift in Sources */,
 				96B6F4AE297C169600577DAA /* ContentView.swift in Sources */,
 				96A6E8D12982E08C009F8642 /* DNSConfig.swift in Sources */,
 				968568D829828D31007F7D2A /* Result+Convenience.swift in Sources */,
