@@ -20,7 +20,12 @@
 		96A6E8D12982E08C009F8642 /* DNSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8CF2982E014009F8642 /* DNSConfig.swift */; };
 		96A6E8D32982E11E009F8642 /* URL+Utilties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8D22982E11E009F8642 /* URL+Utilties.swift */; };
 		96A6E8D42982E122009F8642 /* URL+Utilties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8D22982E11E009F8642 /* URL+Utilties.swift */; };
-		96B6F4AC297C169600577DAA /* DNS_ProxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */; };
+		96A6E8DB2982E6B7009F8642 /* NEVPNConnection+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8DA2982E6B7009F8642 /* NEVPNConnection+Convenience.swift */; };
+		96A6E8DD2982E6FE009F8642 /* NSError+NEVPNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8DC2982E6FE009F8642 /* NSError+NEVPNError.swift */; };
+		96A6E8DF2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8DE2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift */; };
+		96A6E8E12982E74C009F8642 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8E02982E74C009F8642 /* Constants.swift */; };
+		96A6E8E32982E78F009F8642 /* NETunnelProviderManager+Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */; };
+		96B6F4AC297C169600577DAA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AB297C169600577DAA /* App.swift */; };
 		96B6F4AE297C169600577DAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B6F4AD297C169600577DAA /* ContentView.swift */; };
 		96B6F4B0297C169700577DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B6F4AF297C169700577DAA /* Assets.xcassets */; };
 		96B6F4B3297C169700577DAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B6F4B2297C169700577DAA /* Preview Assets.xcassets */; };
@@ -61,8 +66,13 @@
 		968568D729828D31007F7D2A /* Result+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Convenience.swift"; sourceTree = "<group>"; };
 		96A6E8CF2982E014009F8642 /* DNSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSConfig.swift; sourceTree = "<group>"; };
 		96A6E8D22982E11E009F8642 /* URL+Utilties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utilties.swift"; sourceTree = "<group>"; };
+		96A6E8DA2982E6B7009F8642 /* NEVPNConnection+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEVPNConnection+Convenience.swift"; sourceTree = "<group>"; };
+		96A6E8DC2982E6FE009F8642 /* NSError+NEVPNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+NEVPNError.swift"; sourceTree = "<group>"; };
+		96A6E8DE2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEVPNStatus+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		96A6E8E02982E74C009F8642 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NETunnelProviderManager+Primary.swift"; sourceTree = "<group>"; };
 		96B6F4A8297C169600577DAA /* DNS Proxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DNS Proxy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNS_ProxyApp.swift; sourceTree = "<group>"; };
+		96B6F4AB297C169600577DAA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		96B6F4AD297C169600577DAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96B6F4AF297C169700577DAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96B6F4B2297C169700577DAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -100,6 +110,70 @@
 			path = "DNS Packet Tunnel Extension";
 			sourceTree = "<group>";
 		};
+		96A6E8D82982E65C009F8642 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96A6E8E22982E78F009F8642 /* NETunnelProviderManager+Primary.swift */,
+				96A6E8DA2982E6B7009F8642 /* NEVPNConnection+Convenience.swift */,
+				96A6E8DE2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift */,
+				96A6E8DC2982E6FE009F8642 /* NSError+NEVPNError.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96A6E8D92982E668009F8642 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96B6F4B9297C16AA00577DAA /* DNS Proxy.entitlements */,
+				96B6F4AF297C169700577DAA /* Assets.xcassets */,
+				96B6F4B1297C169700577DAA /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		96A6E8E42982E7BF009F8642 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				96B6F4AD297C169600577DAA /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		96A6E8E52982E7C3009F8642 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				96B6F4AB297C169600577DAA /* App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		96A6E8E62982E7DF009F8642 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				968568D329828BBF007F7D2A /* TunnelProviderManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		96A6E8E72982E7F3009F8642 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				968568D529828CEE007F7D2A /* NSError+Convenience.swift */,
+				968568D729828D31007F7D2A /* Result+Convenience.swift */,
+				96A6E8D22982E11E009F8642 /* URL+Utilties.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96A6E8E82982E7FD009F8642 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				96B6F4BC297C1F0A00577DAA /* Logger.swift */,
+				96A6E8E02982E74C009F8642 /* Constants.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		96B6F49F297C169600577DAA = {
 			isa = PBXGroup;
 			children = (
@@ -123,12 +197,11 @@
 		96B6F4AA297C169600577DAA /* DNS Proxy */ = {
 			isa = PBXGroup;
 			children = (
-				96B6F4B9297C16AA00577DAA /* DNS Proxy.entitlements */,
-				96B6F4AD297C169600577DAA /* ContentView.swift */,
-				96B6F4AB297C169600577DAA /* DNS_ProxyApp.swift */,
-				96B6F4AF297C169700577DAA /* Assets.xcassets */,
-				96B6F4B1297C169700577DAA /* Preview Content */,
-				968568D329828BBF007F7D2A /* TunnelProviderManager.swift */,
+				96A6E8E52982E7C3009F8642 /* App */,
+				96A6E8E42982E7BF009F8642 /* UI */,
+				96A6E8E62982E7DF009F8642 /* Services */,
+				96A6E8D82982E65C009F8642 /* Extensions */,
+				96A6E8D92982E668009F8642 /* Resources */,
 			);
 			path = "DNS Proxy";
 			sourceTree = "<group>";
@@ -144,11 +217,9 @@
 		96B6F4C0297C25F400577DAA /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				96B6F4BC297C1F0A00577DAA /* Logger.swift */,
-				968568D529828CEE007F7D2A /* NSError+Convenience.swift */,
-				968568D729828D31007F7D2A /* Result+Convenience.swift */,
-				96A6E8D22982E11E009F8642 /* URL+Utilties.swift */,
 				96A6E8CF2982E014009F8642 /* DNSConfig.swift */,
+				96A6E8E82982E7FD009F8642 /* Environment */,
+				96A6E8E72982E7F3009F8642 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -279,9 +350,14 @@
 				96A6E8D12982E08C009F8642 /* DNSConfig.swift in Sources */,
 				968568D829828D31007F7D2A /* Result+Convenience.swift in Sources */,
 				968568D429828BBF007F7D2A /* TunnelProviderManager.swift in Sources */,
+				96A6E8E32982E78F009F8642 /* NETunnelProviderManager+Primary.swift in Sources */,
 				96A6E8D42982E122009F8642 /* URL+Utilties.swift in Sources */,
-				96B6F4AC297C169600577DAA /* DNS_ProxyApp.swift in Sources */,
+				96A6E8DB2982E6B7009F8642 /* NEVPNConnection+Convenience.swift in Sources */,
+				96B6F4AC297C169600577DAA /* App.swift in Sources */,
+				96A6E8DF2982E730009F8642 /* NEVPNStatus+CustomStringConvertible.swift in Sources */,
+				96A6E8DD2982E6FE009F8642 /* NSError+NEVPNError.swift in Sources */,
 				96B6F4BD297C1F0A00577DAA /* Logger.swift in Sources */,
+				96A6E8E12982E74C009F8642 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,10 +546,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "DNS Proxy/DNS Proxy.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "DNS Proxy/Resources/DNS Proxy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DNS Proxy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DNS Proxy/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JL36X44M34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -504,10 +580,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "DNS Proxy/DNS Proxy.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "DNS Proxy/Resources/DNS Proxy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DNS Proxy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DNS Proxy/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JL36X44M34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
