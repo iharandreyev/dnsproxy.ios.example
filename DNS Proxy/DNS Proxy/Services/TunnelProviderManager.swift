@@ -53,7 +53,7 @@ final class TunnelProviderManager: NSObject, ObservableObject {
             }
             
             if let error {
-                Log("Tunnel manager save before enable failed: \(error)")
+                return Log("Tunnel manager save before enable failed: \(error)")
             }
 
             manager.connection.startVPN { [weak self] error in
